@@ -1,0 +1,24 @@
+# vim: ft=sh
+name="libglade"
+iteration="1"
+version="2.6.4"
+desc="Allows you to load glade interface files in a program at runtime"
+bdeps="python2 pkg-config gtk2"
+deps="gtk2 libxml2"
+arch="any"
+flags=""
+ext="tar.gz"
+
+
+function configure() {
+	PYTHON=/usr/bin/python2.7 ./configure --sysconfdir=/etc --prefix=/usr --localstatedir=/var
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	install -m755 libglade-convert "${pkgdir}/usr/bin/"
+}

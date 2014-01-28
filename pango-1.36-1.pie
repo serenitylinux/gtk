@@ -1,0 +1,25 @@
+# vim: ft=sh
+name="pango"
+iteration="1"
+version="1.36.1"
+desc="A library for layout and rendering of text"
+deps="libthai cairo libxft harfbuzz"
+bdeps="harfbuzz fontconfig cairo libxft libthai gobject-introspection"
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure --prefix=/usr --sysconfdir=/etc \
+		--localstatedir=/var --with-included-modules=basic-fc
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	install -m755 -d "${pkgdir}/etc/pango"
+}

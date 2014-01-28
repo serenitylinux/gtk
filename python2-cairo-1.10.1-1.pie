@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="python2-cairo"
+iteration="1"
+version="1.10.0"
+desc="Python2 bindings for the cairo graphics library"
+bdeps=""
+deps="python2 cairo"
+arch="any"
+flags=""
+src="http://cairographics.org/releases/py2cairo-${version}.tar.bz2"
+url="http://www.cairographics.org/pycairo"
+srcdir="py2cairo-$version"
+
+function configure(){ 
+	none
+}
+function build() {
+	sed -i 's:bin/env python:bin/env python2.7:' waf
+	python2.7 ./waf --version
+	export PYTHON=/usr/bin/python2.7
+	./waf configure --prefix=/usr
+	./waf build
+}
+
+function installpkg() {
+	PYTHON=/usr/bin/python2.7 ./waf install --destdir="${dest_dir}"
+}

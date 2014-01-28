@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="vte"
+iteration="1"
+version="0.28.2"
+desc="Virtual Terminal Emulator widget for use with GTK2"
+bdeps="pygtk intltool gobject-introspection pygobject"
+deps="gtk2"
+arch="any"
+flags=""
+
+
+function configure() {
+	export CFLAGS="$CFLAGS -fno-strict-aliasing"
+	export PYTHON=/usr/bin/python2.7
+	./configure --prefix=/usr --sysconfdir=/etc \
+	      --libexecdir=/usr/lib/vte \
+	      --localstatedir=/var --disable-static \
+	      --enable-introspection --with-gtk=2.0
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

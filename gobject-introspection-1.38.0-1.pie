@@ -1,0 +1,24 @@
+# vim: ft=sh
+name="gobject-introspection"
+iteration="1"
+version="1.38.0"
+desc="Introspection system for GObject-based libraries"
+bdeps="glib2 python2 cairo"
+deps="glib2 python2"
+arch="any"
+flags=""
+majorv="${version::4}"
+
+function configure() {
+	PYTHON=/usr/bin/python2.7 ./configure --prefix=/usr --disable-static #--enable-doctool
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	sed -i '1s|#!/usr/bin/env python$|&2.7|' \
+		"$dest_dir"/usr/lib/gobject-introspection/giscanner/*.py
+}

@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="atk"
+iteration="1"
+version="2.10.0"
+desc="A library providing a set of interfaces for accessibility"
+bdeps="glib2 gobject-introspection"
+deps="glib2"
+arch="any"
+flags=""
+
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

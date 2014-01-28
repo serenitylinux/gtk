@@ -1,0 +1,28 @@
+# vim: ft=sh
+name="libxslt"
+iteration="1"
+version="1.1.28"
+desc="XML stylesheet transformation library"
+url="http://xmlsoft.org/XSLT/"
+bdeps="python2"
+deps="libxml2 libgcrypt"
+arch="any"
+flags=""
+src="ftp://xmlsoft.org/libxslt/${name}-${version}.tar.gz"
+
+
+function configure() {
+	./configure --prefix=/usr --with-python=/usr/bin/python2.7
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	install -d "${dest_dir}/usr/share/licenses/${name}"
+	install -m644 COPYING "${dest_dir}/usr/share/licenses/${name}/"
+	rm -f "${dest_dir}"/usr/lib/python*/site-packages/*.a
+}

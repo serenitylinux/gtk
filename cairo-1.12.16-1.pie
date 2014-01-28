@@ -1,0 +1,36 @@
+# vim: ft=sh
+name="cairo"
+iteration="1"
+version="1.12.16"
+url="http://cairographics.org/"
+src="http://cairographics.org/releases/$name-$version.tar.xz"
+desc="Cairo vector graphics library"
+#poppler libspectre
+#librsvg
+bdeps="gtk2 valgrind"
+#libspectre 
+deps="libpng libxrender libxext fontconfig pixman glib2 mesa bash" #lzo2"
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static \
+		--enable-tee \
+		--enable-gl \
+		--enable-egl \
+		--enable-svg \
+		--enable-gobject
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="vala"
+iteration="1"
+version="0.22.1"
+desc="Compiler for the GObject type system"
+bdeps="libxslt"
+deps="glib2"
+arch="any"
+flags=""
+
+
+function configure() {
+    ./configure --prefix=/usr --enable-vapigen
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

@@ -1,0 +1,22 @@
+# vim: ft=sh
+
+function isset() {
+	[ -z "$(eval echo \$$1)" ]
+}
+
+function ine_v() {
+	if isset $1; then
+		eval $1="$2"
+	fi
+}
+
+ine_v majorv ${version%.*}
+ine_v ext "tar.xz"
+ine_v namecase "$name"
+ine_v url "http://www.gtk.org/"
+ine_v src "http://ftp.gnome.org/pub/gnome/sources/$namecase/$majorv/$namecase-$version.$ext"
+ine_v srcdir "$namecase-$version"
+if [ "$src" == "none" ]; then 
+	src=""
+	srcdir=""
+fi

@@ -1,0 +1,23 @@
+# vim: ft=sh
+name="gtk-engines"
+iteration="1"
+version="2.20.0"
+desc="Theme engines for GTK+"
+bdeps="gtk2 pkg-config intltool"
+deps="gtk2"
+arch="any"
+flags=""
+ext="tar.gz"
+
+
+function configure() {
+	./configure --prefix=/usr --enable-animation
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

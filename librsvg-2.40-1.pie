@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="librsvg"
+iteration="1"
+version="2.40.1"
+desc="A SVG viewing library"
+bdeps="intltool gobject-introspection vala gdk-pixbuf2 cairo"
+deps="gdk-pixbuf2 pango libcroco"
+arch="any"
+flags=""
+majorv=${version:0:4}
+
+function configure() {
+	./configure --prefix=/usr --disable-static --enable-vala
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

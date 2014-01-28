@@ -1,0 +1,32 @@
+# vim: ft=sh
+name="pygobject"
+iteration="1"
+version="2.28.6"
+desc=""
+bdeps="python2 python2-cairo gobject-introspection"
+deps=""
+arch="any"
+flags=""
+src="none"
+
+function configure() {
+	git clone git://git.gnome.org/pygobject
+	cd pygobject
+	git checkout 9456ba7
+	export PYTHON=/usr/bin/python2.7
+	autoreconf -fi
+	./configure --prefix=/usr --with-python=/usr/bin/python2.7
+}
+
+function build() {
+	cd pygobject
+	default
+}
+
+function installpkg() {
+	cd pygobject
+	default
+#	find ${dest_dir}/usr/share/pygobject -name "*.py" -exec\
+#		sed -i '1s|#![ ]*/usr/bin/env python$|#!/usr/bin/env/python2.7|' {} +
+#	rm -r ${dest_dir}/usr/share/gtk-doc
+}

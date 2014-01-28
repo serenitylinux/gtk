@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="pygtk"
+iteration="1"
+version="2.24.0"
+desc="Python bindings for the GTK widget set"
+bdeps="libglade python2-cairo pygobject"
+deps=""
+arch="any"
+flags=""
+ext="tar.gz"
+
+function configure() {
+	export PYTHON=/usr/bin/python2.7
+	./configure --prefix=/usr/  --with-python=/usr/bin/python2.7
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	install -m644 gtk/gtk-extrafuncs.defs "${dest_dir}/usr/share/pygtk/2.0/defs/"
+
+	sed -i -e 's#env python$#env python2.7#' "${dest_dir}"/usr/lib/pygtk/2.0/{,demos/}*.py
+}

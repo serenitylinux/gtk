@@ -1,0 +1,33 @@
+# vim: ft=sh
+name="gtk2"
+iteration="1"
+version="2.24.22"
+desc="GTK+ is a multi-platform toolkit (v2)"
+#cups
+bdeps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2 gobject-introspection"
+deps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2"
+arch="any"
+flags=""
+namecase="gtk+"
+
+
+function configure() {
+	CXX=/bin/false ./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-xinput=yes
+
+    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	sed -i "s#env python#env python2.7#" $dest_dir/usr/bin/gtk-builder-convert
+}
+function post_install() {
+	/usr/bin/gtk-query-immodules-2.0 --update-cache
+}

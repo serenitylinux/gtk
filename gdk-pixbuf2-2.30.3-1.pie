@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="gdk-pixbuf2"
+iteration="1"
+version="2.30.3"
+desc="An image loading library"
+bdeps="gobject-introspection libpng libjpeg libx11 glib2"
+deps="glib2 libpng libjpeg libx11"
+#libtiff
+arch="any"
+flags=""
+namecase="gdk-pixbuf"
+
+
+function configure() {
+	./configure --prefix=/usr \
+	    --with-x11 \
+	    --with-included-loaders=png \
+	    --without-libtiff
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}
