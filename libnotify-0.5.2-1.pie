@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="libnotify"
+iteration="1"
+version="0.5.2"
+desc="Desktop notification library"
+bdeps="gtk2 gobject-introspection gdk-pixbuf2"
+deps="gdk-pixbuf2"
+arch="any"
+flags=""
+ext="tar.bz2"
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

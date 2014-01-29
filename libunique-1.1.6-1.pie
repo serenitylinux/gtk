@@ -1,0 +1,31 @@
+# vim: ft=sh
+name="libunique"
+iteration="1"
+version="1.1.6"
+desc="library for writing single instance applications"
+bdeps="gtk2 gobject-introspection curl"
+deps="gtk2"
+arch="any"
+flags=""
+ext="tar.bz2"
+
+
+function configure() {
+	curl -k "https://projects.archlinux.org/svntogit/packages.git/plain/trunk/remove_G_CONST_RETURN.patch?h=packages/$name" -o p.patch
+	patch -Np1 -i p.patch
+#	autoreconf
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static \
+		--disable-dbus
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

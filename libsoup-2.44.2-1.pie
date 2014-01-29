@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="libsoup"
+iteration="1"
+version="2.44.2"
+desc="GNOME HTTP Library"
+deps="glib2 libxml2 glib-networking sqlite"
+bdeps="intltool gobject-introspection python2 $deps"
+arch="any"
+flags=""
+ext="tar.xz"
+
+export PYTHON=/usr/bin/python2.7
+function configure() {
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}
