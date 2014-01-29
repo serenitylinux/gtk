@@ -20,3 +20,7 @@ function build() {
 function installpkg() {
 	default
 }
+
+function post_install() {
+	gdk-pixbuf-query-loaders --update-cache
+}
