@@ -1,0 +1,27 @@
+# vim: ft=sh
+name="gnome-icon-theme"
+iteration="1"
+version="3.10.0"
+desc="Gnome icon theme"
+deps="hicolor-icon-theme gtk2 icon-naming-utils"
+bdeps="$deps intltool icon-naming-utils"
+arch="any"
+flags=""
+
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	rm -f $dest_dir/usr/share/icons/gnome/icon-theme.cache
+}
+
+function post_install() {
+	gtk-update-icon-cache -q -t -f /usr/share/icons/gnome
+}
