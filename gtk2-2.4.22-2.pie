@@ -1,11 +1,11 @@
 # vim: ft=sh
 name="gtk2"
-iteration="1"
+iteration="2"
 version="2.24.22"
 desc="GTK+ is a multi-platform toolkit (v2)"
 #cups
-bdeps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2 gobject-introspection"
-deps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2"
+bdeps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2 gobject-introspection libxdmcp"
+deps="atk pango libxcursor libxinerama libxrandr libxi libxcomposite libxdamage shared-mime-info cairo gdk-pixbuf2 libxdmcp"
 arch="any"
 flags=""
 namecase="gtk+"
