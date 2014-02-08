@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="libnotify"
-iteration="1"
+iteration="2"
 version="0.5.2"
 desc="Desktop notification library"
-bdeps="gtk2 gobject-introspection gdk-pixbuf2"
+bdeps="gtk2 gobject-introspection gdk-pixbuf2 dbus-glib"
 deps="gdk-pixbuf2"
 arch="any"
 flags=""

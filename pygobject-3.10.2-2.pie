@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="pygobject"
-iteration="1"
+iteration="2"
 version="2.28.6"
 desc=""
-bdeps="python2 python2-cairo gobject-introspection"
+bdeps="python2 python2-cairo gobject-introspection automake autoconf libtool"
 deps=""
 arch="any"
 flags=""

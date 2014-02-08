@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="vte"
-iteration="1"
+iteration="2"
 version="0.28.2"
 desc="Virtual Terminal Emulator widget for use with GTK2"
-bdeps="pygtk intltool gobject-introspection pygobject"
+bdeps="pygtk intltool gobject-introspection pygobject gtk2"
 deps="gtk2"
 arch="any"
 flags=""

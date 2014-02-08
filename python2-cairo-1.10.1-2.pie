@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="python2-cairo"
-iteration="1"
+iteration="2"
 version="1.10.0"
 desc="Python2 bindings for the cairo graphics library"
-bdeps=""
+bdeps="python2 cairo"
 deps="python2 cairo"
 arch="any"
 flags=""
@@ -17,7 +17,7 @@ function configure(){
 function build() {
 	sed -i 's:bin/env python:bin/env python2.7:' waf
 	python2.7 ./waf --version
-	export PYTHON=/usr/bin/python2.7
+	export PYTHON=/bin/python2.7
 	./waf configure --prefix=/usr
 	./waf build
 }

@@ -16,6 +16,7 @@ function configure() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--disable-static
+	sed -i "s,#!/usr/bin/env python,#!/usr/bin/env python2.7," libsoup/*
 }
 
 function build() {

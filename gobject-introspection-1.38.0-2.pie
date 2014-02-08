@@ -1,9 +1,9 @@
 # vim: ft=sh
 name="gobject-introspection"
-iteration="1"
+iteration="2"
 version="1.38.0"
 desc="Introspection system for GObject-based libraries"
-bdeps="glib2 python2 cairo"
+bdeps="glib2 python2 cairo flex bison"
 deps="glib2 python2"
 arch="any"
 flags=""
