@@ -3,11 +3,11 @@ name="gdk-pixbuf2"
 iteration="1"
 version="2.30.3"
 desc="An image loading library"
-bdeps="gobject-introspection libpng libjpeg libx11 glib2"
-deps="glib2 libpng libjpeg libx11"
+bdeps=('gobject-introspection' 'libpng' 'libjpeg' 'libx11' 'glib2')
+deps=('glib2' 'libpng' 'libjpeg' 'libx11')
 #libtiff
-arch="any"
-flags=""
+arch=('any')
+flags=()
 namecase="gdk-pixbuf"
 
 

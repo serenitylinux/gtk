@@ -3,10 +3,10 @@ name="vte"
 iteration="2"
 version="0.28.2"
 desc="Virtual Terminal Emulator widget for use with GTK2"
-bdeps="pygtk intltool gobject-introspection pygobject gtk2"
-deps="gtk2"
-arch="any"
-flags=""
+bdeps=('pygtk' 'intltool' 'gobject-introspection' 'pygobject' 'gtk2')
+deps=('gtk2')
+arch=('any')
+flags=()
 
 
 function configure() {

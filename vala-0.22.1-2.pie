@@ -3,10 +3,10 @@ name="vala"
 iteration="2"
 version="0.22.1"
 desc="Compiler for the GObject type system"
-bdeps="libxslt flex bison libxml2"
-deps="glib2"
-arch="any"
-flags=""
+bdeps=('libxslt' 'flex' 'bison' 'libxml2')
+deps=('glib2')
+arch=('any')
+flags=()
 
 
 function configure() {

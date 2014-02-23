@@ -3,10 +3,10 @@ name="gobject-introspection"
 iteration="2"
 version="1.38.0"
 desc="Introspection system for GObject-based libraries"
-bdeps="glib2 python2 cairo flex bison"
-deps="glib2 python2"
-arch="any"
-flags=""
+bdeps=('glib2' 'python2' 'cairo' 'flex' 'bison')
+deps=('glib2' 'python2')
+arch=('any')
+flags=()
 majorv="${version::4}"
 
 function configure() {

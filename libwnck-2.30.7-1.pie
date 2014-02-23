@@ -3,10 +3,10 @@ name="libwnck"
 iteration="1"
 version="2.30.7"
 desc="Window Navigator Construction Kit"
-bdeps="gtk2 intltool gobject-introspection libxt libxres"
-deps="gtk2 libxres"
-arch="any"
-flags=""
+bdeps=('gtk2' 'intltool' 'gobject-introspection' 'libxt' 'libxres')
+deps=('gtk2' 'libxres')
+arch=('any')
+flags=()
 
 
 function configure() {

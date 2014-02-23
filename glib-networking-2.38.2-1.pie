@@ -5,10 +5,10 @@ version="2.38.2"
 desc="Networking library for glib"
 #libproxy
 #gsettings-desktop-shcemas
-deps="glib2 ca-certificates gnutls"
-bdeps="intltool $deps"
-arch="any"
-flags=""
+deps=('glib2' 'ca-certificates' 'gnutls')
+bdeps=('intltool' 'glib2' 'ca-certificates' 'gnutls')
+arch=('any')
+flags=()
 ext="tar.xz"
 
 

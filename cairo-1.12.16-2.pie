@@ -3,15 +3,15 @@ name="cairo"
 iteration="2"
 version="1.12.16"
 url="http://cairographics.org/"
-src="http://cairographics.org/releases/$name-$version.tar.xz"
+src=('http://cairographics.org/releases/cairo-1.12.16.tar.xz')
 desc="Cairo vector graphics library"
 #poppler libspectre
 #librsvg
-bdeps="gtk2 valgrind glamor-egl mesa"
+bdeps=('gtk2' 'valgrind' 'glamor-egl' 'mesa')
 #libspectre 
 deps="libpng libxrender libxext fontconfig pixman glib2 mesa bash" #lzo2"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 
 
 function configure() {

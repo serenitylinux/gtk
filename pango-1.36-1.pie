@@ -3,10 +3,10 @@ name="pango"
 iteration="1"
 version="1.36.1"
 desc="A library for layout and rendering of text"
-deps="libthai cairo libxft harfbuzz"
-bdeps="harfbuzz fontconfig cairo libxft libthai gobject-introspection"
-arch="any"
-flags=""
+deps=('libthai' 'cairo' 'libxft' 'harfbuzz')
+bdeps=('harfbuzz' 'fontconfig' 'cairo' 'libxft' 'libthai' 'gobject-introspection')
+arch=('any')
+flags=()
 
 
 function configure() {

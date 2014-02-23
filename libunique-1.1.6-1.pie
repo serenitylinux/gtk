@@ -3,10 +3,10 @@ name="libunique"
 iteration="1"
 version="1.1.6"
 desc="library for writing single instance applications"
-bdeps="gtk2 gobject-introspection curl"
-deps="gtk2"
-arch="any"
-flags=""
+bdeps=('gtk2' 'gobject-introspection' 'curl')
+deps=('gtk2')
+arch=('any')
+flags=()
 ext="tar.bz2"
 
 

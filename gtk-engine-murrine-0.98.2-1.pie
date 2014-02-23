@@ -3,10 +3,10 @@ name="gtk-engine-murrine"
 iteration="1"
 version="0.98.2"
 desc="GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers."
-bdeps="gtk2 intltool"
-deps="gtk2"
-arch="any"
-flags=""
+bdeps=('gtk2' 'intltool')
+deps=('gtk2')
+arch=('any')
+flags=()
 ext="tar.xz"
 namecase="murrine"
 

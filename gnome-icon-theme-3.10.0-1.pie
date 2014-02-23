@@ -3,10 +3,10 @@ name="gnome-icon-theme"
 iteration="1"
 version="3.10.0"
 desc="Gnome icon theme"
-deps="hicolor-icon-theme gtk2 icon-naming-utils"
-bdeps="$deps intltool icon-naming-utils"
-arch="any"
-flags=""
+deps=('hicolor-icon-theme' 'gtk2' 'icon-naming-utils')
+bdeps=('hicolor-icon-theme' 'gtk2' 'icon-naming-utils' 'intltool' 'icon-naming-utils')
+arch=('any')
+flags=()
 
 
 function configure() {

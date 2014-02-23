@@ -3,10 +3,10 @@ name="librsvg"
 iteration="2"
 version="2.40.1"
 desc="A SVG viewing library"
-bdeps="intltool gobject-introspection vala gdk-pixbuf2 cairo libxml2 libcroco pango"
-deps="gdk-pixbuf2 pango libcroco"
-arch="any"
-flags=""
+bdeps=('intltool' 'gobject-introspection' 'vala' 'gdk-pixbuf2' 'cairo' 'libxml2' 'libcroco' 'pango')
+deps=('gdk-pixbuf2' 'pango' 'libcroco')
+arch=('any')
+flags=()
 majorv=${version:0:4}
 
 function configure() {

@@ -3,10 +3,10 @@ name="libnotify"
 iteration="3"
 version="0.5.2"
 desc="Desktop notification library"
-bdeps="gtk2 gobject-introspection gdk-pixbuf2 dbus-glib"
-deps="gdk-pixbuf2 dbus-glib"
-arch="any"
-flags=""
+bdeps=('gtk2' 'gobject-introspection' 'gdk-pixbuf2' 'dbus-glib')
+deps=('gdk-pixbuf2' 'dbus-glib')
+arch=('any')
+flags=()
 ext="tar.bz2"
 
 function configure() {

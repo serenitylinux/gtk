@@ -17,6 +17,6 @@ ine_v url "http://www.gtk.org/"
 ine_v src "http://ftp.gnome.org/pub/gnome/sources/$namecase/$majorv/$namecase-$version.$ext"
 ine_v srcdir "$namecase-$version"
 if [ "$src" == "none" ]; then 
-	src=""
+src=('http://cairographics.org/releases/cairo-1.12.16.tar.xz')
 	srcdir=""
 fi

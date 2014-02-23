@@ -3,10 +3,10 @@ name="libsoup"
 iteration="1"
 version="2.44.2"
 desc="GNOME HTTP Library"
-deps="glib2 libxml2 glib-networking sqlite"
-bdeps="intltool gobject-introspection python2 $deps"
-arch="any"
-flags=""
+deps=('glib2' 'libxml2' 'glib-networking' 'sqlite')
+bdeps=('intltool' 'gobject-introspection' 'python2' 'glib2' 'libxml2' 'glib-networking' 'sqlite')
+arch=('any')
+flags=()
 ext="tar.xz"
 
 export PYTHON=/usr/bin/python2.7

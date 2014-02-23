@@ -3,10 +3,10 @@ name="pygtk"
 iteration="1"
 version="2.24.0"
 desc="Python bindings for the GTK widget set"
-bdeps="libglade python2-cairo pygobject"
-deps=""
-arch="any"
-flags=""
+bdeps=('libglade' 'python2-cairo' 'pygobject')
+deps=()
+arch=('any')
+flags=()
 ext="tar.gz"
 
 function configure() {

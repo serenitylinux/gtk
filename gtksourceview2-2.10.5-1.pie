@@ -3,10 +3,10 @@ name="gtksourceview2"
 iteration="1"
 version="2.10.5"
 desc="A text widget adding syntax hilighting and more to gnome"
-bdeps="gtk2 libxml2 intltool pkg-config"
-deps="gtk2 libxml2"
-arch="any"
-flags=""
+bdeps=('gtk2' 'libxml2' 'intltool' 'pkg-config')
+deps=('gtk2' 'libxml2')
+arch=('any')
+flags=()
 namecase="gtksourceview"
 ext="tar.bz2"
 

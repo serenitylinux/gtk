@@ -4,11 +4,11 @@ iteration="2"
 version="1.1.28"
 desc="XML stylesheet transformation library"
 url="http://xmlsoft.org/XSLT/"
-bdeps="python2 libxml2"
-deps="libxml2 libgcrypt"
-arch="any"
-flags=""
-src="ftp://xmlsoft.org/libxslt/${name}-${version}.tar.gz"
+bdeps=('python2' 'libxml2')
+deps=('libxml2' 'libgcrypt')
+arch=('any')
+flags=()
+src=('ftp://xmlsoft.org/libxslt/libxslt-1.1.28.tar.gz')
 
 
 function configure() {
